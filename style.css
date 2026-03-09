@@ -1,1 +1,87 @@
 
+/* ESTILO GERAL */
+
+body{
+margin:0;
+font-family:Arial;
+color:white;
+background:#020412;
+overflow-x:hidden;
+}
+
+/* FUNDO ESPAÇO ANIMADO (SEM IMAGEM) */
+
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:200%;
+height:200%;
+background:
+radial-gradient(white 1px, transparent 1px),
+radial-gradient(white 1px, transparent 1px),
+radial-gradient(white 2px, transparent 2px);
+
+background-size:120px 120px,180px 180px,250px 250px;
+
+animation:space 120s linear infinite;
+
+opacity:0.3;
+z-index:-1;
+}
+
+@keyframes space{
+
+0%{
+transform:translate(0,0);
+}
+
+100%{
+transform:translate(-400px,-400px);
+}
+
+}
+
+/* HEADER */
+
+header{
+text-align:center;
+padding:40px;
+background:#0b0f2b;
+}
+
+/* POSTS */
+
+#updatesContainer{
+max-width:800px;
+margin:auto;
+padding:20px;
+}
+
+.post{
+background:#111633;
+padding:20px;
+margin-bottom:20px;
+border-radius:12px;
+}
+
+.date{
+font-size:14px;
+opacity:0.7;
+}nav{
+margin-top:10px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 10px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#4da3ff;
+}html{
+scroll-behavior:smooth;
+}
